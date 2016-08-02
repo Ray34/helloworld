@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="header">
+      
+    </div>
+    {% block content %}
+    {% endblock %}
+    <footer class="footer navbar-fixed-bottom">@2016 新华社 所有版权归新华社投票系统开发团队所有</footer>
+    {% block script %}
+    	<script src="/javascripts/jquery-3.1.0.min.js"></script>
+    	<script src="/javascripts/bootstrap.min.js"></script>
+    {% endblock %}
+  </body>
+</html>
