@@ -5,10 +5,20 @@
         <h1>Hello World!</h1>
         <p><a href="chat" class="btn btn-primary btn-large">进入聊天室</a></p>
       </div>
+    <a href="#/board1">按钮1</a>
+    <a href="#/board2">按钮2</a>
+    <div id="container"></div>
 {% endblock %}
 
 {% block script %}
 	{% parent %}
-	<script type="text/javascript">
+    <script src="/javascripts/router.min.js"></script>
+    <script src="/javascripts/example.js"></script>
+	<script type="text/html" id="b1">
+	    <p>board1</p>
 	</script>
+
+    <script type="text/html" id="b2">
+        <p>board2</p>
+    </script>
 {% endblock %}
