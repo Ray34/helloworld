@@ -13,6 +13,11 @@ $(function () {
         className: 'b1',
         render: function(){
             return $('#b1').html();
+        },
+        bind: function(){
+            $('#p1').on('click', function(){
+                alert('Hello!');
+            });
         }
     };
 
