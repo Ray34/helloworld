@@ -10,7 +10,7 @@ $(function () {
 
     var board1 = {
         url: '/board1',
-        className: 'b1',
+        //className: 'b1',
         render: function(){
             return $('#b1').html();
         },
@@ -23,7 +23,7 @@ $(function () {
 
     var board2 = {
         url: '/board2',
-        className: 'b2',
+        //className: 'b2',
         render: function(){
             return $('#b2').html();
         }
