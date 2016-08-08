@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax练习</title>
+	<script type="text/javascript" src="/javascripts/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#b1').on("click", function(){
+			var conf_name = "dafdsaf";
+			var conf_date = "2016-0-06";
+			var conf_place = "xxx";
+			var conf_organizer = "xxx";
+			var conf_operator = "xxx";
+
+			var para = {
+				"name": conf_name,
+				"date": conf_date,
+				"place": conf_place,
+				"organizer": conf_organizer,
+				"operator": conf_operator
+			}
+
+			$.post("conf/create", para, function(data){
+				$('#content').append("<p>" + data + "</p>");
+			});
+		});
+
+		$('#b2').on("click", function(){
+			var confId = 1111;
+			$.get("conf/close?confId=" + confId, function(data){
+				$('#content').append("<p>" + data + "</p>");
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<div id="container">
+	<button type="button" id="b1">按钮1</button>
+	<button type="button" id="b2">按钮2</button>
+	<div id="content"></div>
+</div>
+</body>
+</html>
